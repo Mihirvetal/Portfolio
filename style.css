@@ -378,6 +378,7 @@ body{
 @media screen and (max-width:600px) {
     .probox{
         padding: 10px;
+        
     }
 }
 .probox i{
@@ -396,7 +397,8 @@ body{
 .probox div{
     text-align: justify;
     width: 80%;
-    line-height: 25px;
+    line-height: 18px;
+    height: auto;
 }
 .link{
     display: flex;

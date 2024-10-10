@@ -1,6 +1,6 @@
 const cont = document.querySelector(".container");
 
-const careers = ['Frontend Developer','Software Developer']
+const careers = ['Frontend Developer','Software Developer', 'FullStack Developer']
 
 let careerindx=0;
 let charidx=1;
@@ -21,17 +21,14 @@ function updateText(){
 
 
 
-document.getElementById('resumelink').addEventListener('click', function(event) {
-    // event.preventDefault(); // Prevent the default action
+function downloadResume() {
+    setTimeout(() => {
+        const link = document.createElement('a');
+        link.href = 'https://drive.google.com/uc?export=download&id=1XJMwJHQ2QOErOvm6l7hSE8coOps2O0mS';
+        link.download = 'resume.pdf';  // Rename the file if needed
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }, 1000);  // Delay the download to allow the new tab to open first
+}
 
-    // Open the resume in a new tab
-    window.open(this.href, '_blank');
-
-    // Download the resume
-    const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1XJMwJHQ2QOErOvm6l7hSE8coOps2O0mS/view?usp=sharing';
-    link.download = 'Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-});
